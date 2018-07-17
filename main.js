@@ -94,7 +94,7 @@ $('document').ready(function () {
             piece = "Bishop"
           } else if (board[pieceSelected] === 3 || board[pieceSelected] === 13) {
             piece = "Knight"
-          } else if (board[pieceSelected] === 4 || board[pieceSelected] === 4) {
+          } else if (board[pieceSelected] === 4 || board[pieceSelected] === 14) {
             piece = "Castle"
           } else if (board[pieceSelected] === 5 || board[pieceSelected] === 15) {
             piece = "King"
@@ -371,7 +371,7 @@ function showMoves(square, type) {
     }
     possibleMove = square;
     // Right
-    while (possibleMove < square + (square % 8 + 1)) {
+    while (possibleMove < square + (7 - square % 8)) {
       possibleMove += 1;
       if (boardTeam[possibleMove] === turn) {
         break;
@@ -520,7 +520,7 @@ function showMoves(square, type) {
     }
     possibleMove = square;
     // Right
-    while (possibleMove < square + (square % 8 + 1)) {
+    while (possibleMove < square + (7 - square % 8)) {
       possibleMove += 1;
       if (boardTeam[possibleMove] === turn) {
         break;
