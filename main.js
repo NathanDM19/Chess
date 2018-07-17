@@ -144,7 +144,7 @@ $('document').ready(function () {
 
   // White Pawns - 11
   for (let i = 8; i < 16; i++) {
-    $(`#${i}`).append('<img class="piece" src="WhitePawn.png">')
+    $(`#${i}`).append('<img class="piece" src="whitePawn.png">')
   }
   // White Bishops - 12
   $('#2').append('<img class="piece" src="whiteBishop.png">')
